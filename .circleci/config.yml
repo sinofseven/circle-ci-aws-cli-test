@@ -11,6 +11,9 @@ jobs:
       - run:
           name: test
           command: aws --version
+      - run:
+          name: sts get caller identity
+          command: aws sts get-caller-identity
 
 workflows:
   version: 2
