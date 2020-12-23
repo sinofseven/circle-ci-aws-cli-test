@@ -18,8 +18,8 @@ jobs:
           name: issue
           command: cat /etc/issue
       - run:
-          name: which zip
-          command: which zip
+          name: zip
+          command: zip
 
 workflows:
   version: 2
