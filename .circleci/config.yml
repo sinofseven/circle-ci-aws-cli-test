@@ -17,6 +17,9 @@ jobs:
       - run:
           name: issue
           command: cat /etc/issue
+      - run:
+          name: which zip
+          command: which zip
 
 workflows:
   version: 2
