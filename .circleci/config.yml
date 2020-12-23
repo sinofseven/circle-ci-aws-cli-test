@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: amazon/aws-cli
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - run:
+          name: test
+          command: aws --version
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test:
+          context:
+            - docker_config
+            - ffxiv-item-name-database
